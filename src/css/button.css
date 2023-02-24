@@ -1,0 +1,10 @@
+button[type="submit"] .fa-solid {
+    margin-left: 5px;
+    transform: rotate() translateY(50%);
+    transition: 0.3s all ease-in-out;
+}
+
+button[type="submit"]:hover .fa-solid {
+    transform: rotate(10deg);
+    margin-left: 9px;
+}

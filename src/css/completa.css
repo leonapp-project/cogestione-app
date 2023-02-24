@@ -1,0 +1,14 @@
+label {
+    font-weight: 500 !important;
+    margin-bottom: 0 !important;
+    font-size: 0.8em !important;
+}
+
+select:focus {
+    box-shadow: 0 0 0.6em rgb(0, 0, 0, 0.2) !important;
+    border-color: rgb(0, 0, 0, 0.3) !important;
+}
+
+.inline-div {
+    display:inline-block;
+}

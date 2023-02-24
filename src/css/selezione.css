@@ -1,0 +1,155 @@
+:root {
+    --success: rgb(24, 213, 24);
+    --selection: #3372dc;
+}
+
+.show {
+    display: block !important;
+}
+
+.show i.fa-chevron-right {
+    transform: rotate(90deg);
+}
+
+.activity-wrapper {
+    border-radius: 10px;
+    border: 1px solid black;
+    margin-bottom: 20px;
+}
+
+.activity-wrapper.completato {
+    border: 2px solid var(--success);
+}
+.activity-wrapper.completato .ora {
+    color: var(--success);
+}
+
+.activity-wrapper.selezionato {
+    border: 2px solid var(--selection);
+}
+.activity-wrapper.selezionato .ora {
+    color: var(--selection);
+}
+
+
+.disabled_block_button {
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+.ora {
+    cursor: pointer;
+    padding: 1rem 1.5rem;
+    margin: 0 !important;
+}
+
+.ora i {
+    float: right;
+    transition: 0.2s all ease-in-out;
+}
+
+.rows {
+    padding: 0.5rem 1.5rem;
+    display: none;
+}
+
+
+/* ACTIVITY INSIDE */
+
+.activity {
+    padding: 0.7rem 0rem;
+    border-radius: 10px;
+    display: flex;
+    align-items: left;
+    flex-direction: column;
+}
+
+.activity:not(:last-child) {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.activity--name {
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.activity--under {
+    display: flex;
+}
+
+.activity--under-info:not(:first-child) {
+    padding-left: 7.5px;
+}
+.activity--under-info:not(:last-child) {
+    padding-right: 7.5px;
+    border-right: 2px solid rgba(0, 0, 0, 0.5);
+}
+
+/*
+.activity .orario {
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin: 0rem 0.5rem;
+    vertical-align: middle;
+}
+.activity .luogo {
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin: 0rem 0.5rem;
+    vertical-align: middle;
+}
+.activity .descrizione {
+    font-size: 1.1rem;
+    font-weight: 300;
+    margin: 0rem 0.5rem;
+    vertical-align: middle;
+}
+.activity i {
+    font-size: 1.2rem;
+    transform: rotate(0deg);
+    vertical-align: top;
+    display:inline-block;
+}
+.activity .rimanenti {
+    font-size: 1.1rem;
+    font-weight: 200;
+    margin: 0.5rem 1rem 0.5rem 0.5rem;
+    vertical-align: middle;
+}
+*/
+
+.activity .button {
+    margin-top: 1rem;
+    width: 6rem;
+}
+
+.completato .activity .button {
+    border: 2px solid var(--success);
+}
+.completato .activity .button:hover {
+    background: var(--success);
+    color: white;
+}
+
+.selezionato .activity .button {
+    border: 2px solid var(--selection);
+}
+.selezionato .activity .button:hover {
+    background: var(--selection);
+    color: white;
+}
+
+#notifica {
+    height: 100%; display: flex; align-items: center; justify-content: center; position: fixed;
+    margin-left: 80px;
+    margin-right:  80px;
+    z-index: 10;
+}
+
+/*
+attivita che non ci si puo iscrivere con pulsanti disabilitati di colore grigio
+*/
+.disabled-activity {
+    pointer-events: none;
+    opacity: 0.5;
+}
