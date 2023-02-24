@@ -1,7 +1,7 @@
 <?php
 $servername = "localhost";
 $username = "leonapp";
-$password = "leonapp!";
+$password = "";
 $dbname = "leonapp";
 
 // Create connection
